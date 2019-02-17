@@ -15,6 +15,18 @@ formulas.
 $ docker-compose up -d
 ```
 
+## Web-addresses
+
+For visiting your Wordpress site:
+
+http://localhost:9080
+
+For examining the MySQL database with Adminer
+
+http://localhost:8080
+
+See `docker-compose.yml` for default passwords.
+
 ## Enable LaTeX in Wordpress
 
 Download some LaTeX-plugin like
