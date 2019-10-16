@@ -9,10 +9,17 @@ formulas.
 
 * Recent enough Docker with Docker Compose enabled
 
+## Build custom Wordpress
+
+```
+$ cd mywordpress
+$ ./build.sh
+```
+
 ## Start Wordpress
 
 ```
-$ docker-compose up -d
+$ docker-compose up [-d]
 ```
 
 ## Web-addresses
