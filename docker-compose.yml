@@ -4,7 +4,7 @@ version: '3.1'
 services:
 
   wordpress:
-    image: mywordpress
+    build: wordpress-local
     restart: always
     depends_on:
       - db
