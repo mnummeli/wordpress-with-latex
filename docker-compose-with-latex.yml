@@ -1,10 +1,10 @@
 # Use root/example as user/password credentials
-version: '3'
+version: '3.1'
 
 services:
 
   wordpress:
-    image: wordpress
+    build: wordpress-local
     restart: always
     depends_on:
       - db
@@ -14,7 +14,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     ports:
-      - 8080:80
+      - 9080:80
     volumes:
       - wordpress:/var/www/html
 
@@ -27,10 +27,14 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
-    ports:
-      - 13306:3306
     volumes:
       - db:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
 
 volumes:
   wordpress:
